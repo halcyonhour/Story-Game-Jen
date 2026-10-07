@@ -1,1 +1,76 @@
 <!-- Add your index page here -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Favorite Books</title>
+</head>
+
+<body>
+
+    <h1>My Favorite Books</h1>
+
+    <p>Welcome! Fill out the form to tell me about your favorite books.</p>
+
+    <blockquote>
+        <em>"Reading is a great way to explore new worlds."</em>
+    </blockquote>
+
+    <h2>Book Form</h2>
+
+    <form action="game.html" method="get">
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <br><br>
+
+        <label for="book">Favorite Book:</label>
+        <input type="text" id="book" name="book" placeholder="Enter a book">
+        <br><br>
+
+        <label for="genre">Favorite Genre:</label>
+        <select id="genre" name="genre">
+            <option value="fantasy">Fantasy</option>
+            <option value="mystery">Mystery</option>
+            <option value="romance">Romance</option>
+        </select>
+        <br><br>
+
+        <label>How often do you read?</label>
+        <br>
+
+        <input type="radio" id="daily" name="reading" value="daily">
+        <label for="daily">Daily</label>
+
+        <input type="radio" id="weekly" name="reading" value="weekly">
+        <label for="weekly">Weekly</label>
+
+        <input type="radio" id="monthly" name="reading" value="monthly">
+        <label for="monthly">Monthly</label>
+
+        <br><br>
+
+        <label for="number">Books read this year:</label>
+        <input type="number" id="number" name="number">
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <h2>Books</h2>
+
+    <img src="atlasseries.jpg" alt="Book picture">
+    <img src="bookmoodboard1.jpg" alt="Another book picture">
+
+    <!-- This is a comment. -->
+
+    <p>
+        <strong>Want to learn more about me?</strong>
+    </p>
+
+    <a href="aboutme.html">About Me</a>
+
+</body>
+
+</html>
