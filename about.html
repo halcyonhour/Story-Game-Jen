@@ -1,1 +1,67 @@
 <!-- add your about me page here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @font-face {
+            font-family: "Brannboll";
+            src: 
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    .image-container {
+      display:flex ;            
+      justify-content: center; 
+      gap: 10px;                
+      width: 100%;             
+    }
+
+    .image-box {
+      flex: 1;                 
+    }
+
+    .image-box img {
+      width: 100%;             
+      height: auto;            
+      display: block;          
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .image-container {
+        flex-direction: column; 
+      }
+    }
+    </style>
+
+
+</head>
+<body>
+
+<div class="image-container">
+
+     <div class="image-block">
+        <img src="mirrorimage.jpg" style="border-radius: 15px; width: 300px; height: 300px;">
+    </div>
+
+<div class="image-block">
+    <img src="victoriapfp.jpg" style="border-radius: 15px; width: 300px; height: 300px;">
+    </div>
+
+  <div class="image-block">
+    <img src="bookstack.jpg" style="border-radius: 15px; width: 300px; height: 300px;">
+  </div>
+</div>
+    
+
+
+
+
+
+</body>
+</html>
