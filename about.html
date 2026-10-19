@@ -7,36 +7,36 @@
     <title>Document</title>
 
 <style>
+  
+        @font-face {
+        font-family: "Autography";
+        src: url("fonts/Autography.otf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        }
 
-    @font-face {
-    font-family: "Brannboll";
-    src: "fonts/Brannboll.ttf";
-    font-weight: normal;
-    font-style: normal;
-    }
 
-
-    .image-container {
-      display:flex ;            
-      justify-content: center; 
-      gap: 10px;                
-      width: 100%;             
-    }
-
-    .image-box {
-      flex: 1;                 
-    }
-
-    .image-box img {
-      width: 100%;             
-      height: auto;            
-      display: block;          
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
       .image-container {
-        flex-direction: column; 
+        display:flex ;            
+        justify-content: center; 
+        gap: 10px;                
+        width: 100%;             
+      }
+
+      .image-box {
+        flex: 1;                 
+      }
+
+      .image-box img {
+        width: 100%;             
+        height: auto;            
+        display: block;          
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .image-container {
+          flex-direction: column; 
       }
     }
   </style>
