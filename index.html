@@ -1,61 +1,96 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Add your index page here -->
+    <title>Your Move, Detective</title>
 
     <style>
         @font-face {
-            font-family: "Brannboll";
-            src: 
-            font-weight: normal;
-            font-style: normal;
+        font-family: "Brannboll";
+        src: url("fonts/Brannboll.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        h2 {
+        font-family: "Brannboll", sans-serif;
+        font-size: 2em;
+        text-align: center;
         }
     </style>
 </head>
- <h2 style="font-family: 'Brannboll', sans-serif; font-size: 2em; text-align: center">Your Move, Detective</h2>
-    <p>Choose your investigative style before entering the case. Will you study the position, pressure the pieces, or wait for a careless move? Your details will be recorded in the URL and carried into your case file.</p>
-    
-    <form action="game.html" method="get">
-        <label for="detective">Name on your case file</label>
-        <input type="text" id="detective" name="detective" placeholder="e.g. Alex Morgan" required>
-        
-        <br></br>
 
-        <label for="background">Your former specialty</label>
-        <select id="background" name="background" required>
 
-        <br></br>
+<body>
+    <section>
+        <h2>Your Move, Detective</h2>
 
-        <option value="">Choose your specialty</option>
-        <option value="interrogation">Reading people and interrogation</option>
-        <option value="forensics">Physical evidence and forensics</option>
-        <option value="deduction">Patterns, logic, and deduction</option>
-        </select>
+        <p>
+        Choose your investigative style before entering the case.
+        Will you study the position, pressure the pieces, or wait
+        for a careless move? Your details will be recorded in the
+        URL and carried into your case file.
+        </p>
 
-        <br></br>
+        <form action="game.html" method="get">
+            <label for="detective">Name on your case file</label>
+            <input type="text" id="detective" name="detective" placeholder="e.g. Alex Morgan" required>
 
-        <label>Choose your opening move</label>
-        <div class="radio-option"><input type="radio" id="careful" name="approach" value="careful" required> <label for="careful">The Patient Gambit — examine every clue</label></div>
-        <div class="radio-option"><input type="radio" id="bold" name="approach" value="bold"> <label for="bold">The King's Attack — confront the suspects</label></div>
-        <div class="radio-option"><input type="radio" id="quiet" name="approach" value="quiet"> <label for="quiet">The Shadow Move — observe unseen</label></div>
+            <br><br>
 
-        <br></br>
+            <label for="background">Your former specialty</label>
 
-        <label for="years">Years of detective experience</label>
-        <input type="number" id="years" name="years" min="1" max="60" placeholder="e.g. 18">
+            <select id="background" name="background" required>
+                <option value="">Choose your specialty</option>
+                <option value="interrogation">Reading people and interrogation</option>
 
-        <br></br>
+                <option value="forensics">Physical evidence and forensics</option>
+
+                <option value="deduction">Patterns, logic, and deduction</option>
+            </select>
+
+            <br><br>
+
+            <p>Choose your opening move</p>
+
+            <div class="radio-option">
+                <input type="radio" id="careful" name="approach"value="careful" required>
+                <label for="careful">The Patient Gambit — examine every clue</label>
+            </div>
+
+            <div class="radio-option">
+                <input type="radio" id="bold" name="approach" value="bold">
+                <label for="bold">The King's Attack — confront the suspects</label>
+            </div>
+
+            <div class="radio-option">
+                <input type="radio" id="quiet" name="approach" value="quiet">
+                <label for="quiet">The Shadow Move — observe unseen</label>
+            </div>
+
+            <br><br>
+
+            <label for="years">Years of detective experience</label>
+            <input type="number" id="years" name="years" min="1" max="60" placeholder="e.g. 18">
+
+            <br><br>
 
         <label for="theory">Who is your first suspect? (optional)</label>
+        
         <input type="text" id="theory" name="theory" placeholder="Name a suspect—or trust your instinct">
 
-        <br></br>
+        <br><br>
 
-        <button type="submit">Open the Case File ♟</button>
+            <button type="submit">Open the Case File ♟</button>
+
         </form>
-        </section>
+    </section>
 
-        <p>Every mystery has a mind behind it. Read the <a href="abou.html">creator's profile</a>.</p>
+    <p>
+        Every mystery has a mind behind it.
+        Read the <a href="about.html">creator's profile</a>.
+    </p>
+</body>
 </html>
