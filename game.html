@@ -3,58 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js" defer></script>
+    <title>The Poisoned Pawn</title>
+    <style>
+        body {
+            background-color: #171923;
+            color: #e8e4dc;
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1.7;
+            max-width: 850px;
+            margin: 35px auto;
+            padding: 0 22px;
+        }
 
+        h1 {
+            color: #d6b56d;
+            text-align: center;
+            letter-spacing: 3px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #c77d83;
+            border-bottom: 1px solid #66545a;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #9db6d1;
+        }
+
+        .subtitle {
+            color: #b6b1aa;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .accent {
+            color: #d6b56d;
+        }
+
+        .story {
+            margin-top: 28px;
+            margin-bottom: 28px;
+        }
+
+        button {
+            background: none;
+            border: none;
+            color: #9db6d1;
+            font: inherit;
+            text-align: left;
+            padding: 5px 0;
+            cursor: pointer;
+            text-decoration: underline;
+            display: block;
+        }
+
+        button:hover {
+            color: #d6b56d;
+        }
+
+        .choices {
+            margin: 18px 0;
+        }
+
+        .note {
+            color: #a9c7a0;
+            font-style: italic;
+        }
+
+        .warning {
+            color: #e09a8d;
+        }
+
+        .character {
+            color: #d6b56d;
+            font-weight: bold;
+        }
+
+        #clueCount {
+            color: #a9c7a0;
+        }
+
+        footer {
+            color: #8f8d91;
+            text-align: center;
+            margin-top: 55px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-    <header>
-      <nav>
-            <ul> 
-                <li><a href="index.html">Home</a></li>
-            </ul>
-            <ul> 
-                <li><a href="game.html">Play the game</a></li>
-            </ul>
-            <ul> 
-                <li><a href="about.html">About the creator</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>♟ THE POISONED PAWN ♟</h1>
+    <p class="subtitle">A winter murder mystery · 1965</p>
 
-    <main>
-    <header>
-        <h1 id="scene-title">  </h1>
-        <h2 id="character-name">  </h2>
-    </header>
-    
-    <section>
-    <p id="scene-text">     </p>
-
-    </section>
-
-    <section>
-        <div id="choices-container"> </div>
-    </section>   
-        
-    <section>
-        <p> Current HP:</p>
-        <ul>
-            <li id="health-display"> 100</li>
-        </ul>
-
-        <p> Inventory:</p>
-        <ul>
-            <li id="inventory-display"> </li>
-        </ul>
-
-        <p id="message-display"></p>
-    </section>
-
-
+    <main id="game">
+        <h2>Opening Move</h2>
+        <div class="story">
+            <p>It is the winter of 1965. A blizzard has trapped you inside a remote lodge with several other guests. You had come here for a quiet retreat, not another investigation.</p>
+            <p>Chess Grandmaster <span class="accent">Anton Kessler</span> invited the guests to the game room to watch him play against his rival, Woman Grandmaster Lena Okafor.</p>
+            <p>Mid-game, Kessler collapsed. By the time you reached him, he was no longer breathing.</p>
+            <p>You are a retired detective—and the only person here with investigative experience. The guests reluctantly turn to you for answers. The roads are blocked, the phone line may be useless, and the storm gives you only so much time.</p>
+            <p class="warning">Was Kessler's death natural, or has someone made a deadly move?</p>
+        </div>
+        <div class="choices">
+            <button onclick="showScene('crimeScene')">Begin investigation →</button>
+        </div>
     </main>
-    <footer>
 
-    </footer>
+    <footer>Every clue is a move. Every suspect has something to hide.</footer>
 </body>
 </html>

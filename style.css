@@ -1,0 +1,110 @@
+
+/* General page styling */
+body {
+    background-color: #100d0c;
+    background-image:
+        conic-gradient(
+            #211714 25%,
+            transparent 0 50%,
+            #211714 0 75%,
+            transparent 0
+        );
+    background-size: 48px 48px;
+    color: #e5d6c7;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 25px;
+}
+
+/* Main title */
+h1 {
+    color: #b6423b;
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px #3b1715;
+}
+
+/* Section titles */
+h2 {
+    color: #c69a70;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #722d2d;
+    padding-bottom: 10px;
+}
+
+/* Smaller titles */
+h3 {
+    color: #b6423b;
+    letter-spacing: 1px;
+}
+
+/* Chess-piece decorations before headings */
+h2::before {
+    content: "♟ ";
+    color: #8e392f;
+}
+
+/* Paragraphs */
+p {
+    color: #e5d6c7;
+}
+
+/* Important clues */
+strong,
+.clue {
+    color: #c69a70;
+}
+
+/* Warnings and important story details */
+.warning {
+    color: #d35a50;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* Lists */
+li::marker {
+    color: #b6423b;
+}
+
+/* Links */
+a {
+    color: #c69a70;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d35a50;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    color: #8e392f;
+    text-align: center;
+    letter-spacing: 4px;
+    border-top: 1px solid #65402f;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
