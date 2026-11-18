@@ -1,112 +1,372 @@
-<!-- add your about me page here -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Me | The Poisoned Pawn</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-  
-        @font-face {
+
+    @font-face {
         font-family: "Autography";
-        src: url("fonts/Autography.otf") format("truetype");
+        src: url("fonts/Autography.otf") format("opentype");
         font-weight: normal;
         font-style: normal;
-        }
-
-        * {
-          font-family: "Autography", sans-serif;
-        }
-
-
-      .image-container {
-        display:flex ;            
-        justify-content: center; 
-        gap: 10px;                
-        width: 100%;             
-      }
-
-      .image-box {
-        flex: 1;                 
-      }
-
-      .image-box img {
-        width: 100%;             
-        height: auto;            
-        display: block;          
-      }
-
-      p {
-        font-size: 30px;
-      }
-
-      /* Mobile Responsiveness */
-      @media (max-width: 768px) {
-        .image-container {
-          flex-direction: column; 
-      }
     }
-  </style>
-</head>
 
+    * {
+        font-family: "Autography", sans-serif;
+    }
+    body {
+        background-color: #211b1b;
+        color: #e6d8d3;
+    }
+
+    .main-window {
+        max-width: 900px;
+        margin: 60px auto;
+        background-color: #392929;
+        border: 2px solid #855353;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    }
+
+    .window-tabs {
+        background-color: #4b3333;
+        padding: 15px 15px 0;
+        border-bottom: 1px solid #855353;
+    }
+
+    .window-tabs .nav-link {
+        background-color: #382626;
+        color: #c6a3a0;
+        border: 1px solid #855353;
+        border-bottom: none;
+        margin-right: 6px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .window-tabs .nav-link:hover {
+        background-color: #684545;
+        color: #fff;
+    }
+
+    .window-tabs .nav-link.active {
+        background-color: #211b1b;
+        color: #e4c5c1;
+        border-color: #855353;
+    }
+    .toolbar {
+        background-color: #211b1b;
+        border-bottom: 1px solid #855353;
+        padding: 10px 15px;
+    }
+
+    .toolbar-icon {
+        border: 1px solid #855353;
+        color: #c9a6a1;
+        background-color: #392929;
+        border-radius: 50%;
+        text-decoration: none;
+        padding: 4px 10px;
+        margin-right: 3px;
+    }
+
+    .toolbar-icon:hover {
+        background-color: #704747;
+        color: white;
+    }
+
+    .address-bar {
+        background-color: #392929;
+        color: #b99893;
+        border: 1px solid #855353;
+        border-radius: 30px;
+        padding: 5px 15px;
+        text-align: center;
+    }
+
+    .content-area {
+        background-color: #211b1b;
+    }
+
+    .content-area .row {
+        margin: 0;
+    }
+
+    .content-area .col-md-4,
+    .content-area .col-md-5,
+    .content-area .col-md-3 {
+        padding: 12px;
+    }
+
+    .main-image {
+        width: 100%;
+        height: 290px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid #855353;
+    }
+
+    .side-image {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 12px;
+        border: 1px solid #855353;
+    }
+
+    .info-card {
+        background-color: #2c2222;
+        border: 1px solid #855353;
+        color: #e6d8d3;
+        height: 100%;
+    }
+
+    .section-label {
+        background-color: #704747;
+        color: #e8ceca;
+        display: inline-block;
+        padding: 2px 12px;
+        font-size: 18px;
+    }
+
+    .info-card p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .side-card {
+        background-color: #2c2222;
+        border: 1px solid #855353;
+        color: #e6d8d3;
+    }
+
+    .side-card p {
+        font-size: 18px;
+    }
+
+    .custom-button {
+        background-color: #704747;
+        color: #f2e4e0;
+        border: 1px solid #986b6b;
+    }
+
+    .custom-button:hover {
+        background-color: #8a5b5b;
+        color: white;
+    }
+
+    .quote {
+        font-size: 18px;
+        color: #c6aaa5;
+        font-style: italic;
+    }
+
+    .window-footer {
+        background-color: #4b3333;
+        color: #c6a3a0;
+        text-align: center;
+        padding: 8px;
+        font-size: 15px;
+    }
+
+    @media (max-width: 767px) {
+
+        .main-window {
+            margin: 15px auto;
+        }
+        .main-image {
+            height: 250px;
+        }
+        .info-card p {
+            font-size: 18px;
+        }
+        .address-bar {
+            font-size: 12px;
+            padding: 4px;
+        }
+
+    }
+
+</style>
+</head>
 
 <body>
 
-<div class="image-container">
+<div class="container">
 
-     <div class="image-block">
-        <img src="mirrorimage.jpg" style="border-radius: 15px; width: 300px; height: 300px;">
+    <div class="main-window">
+
+        <!-- bootstrap navbar -->
+        <nav class="window-tabs">
+            <ul class="nav nav-tabs border-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="game.html">Game</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">About Me</a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- bootstrap toolbar -->
+        <div class="toolbar">
+            <div class="row align-items-center">
+
+                <div class="col-4">
+                    <a href="index.html" class="toolbar-icon">‹</a>
+                    <a href="game.html" class="toolbar-icon">›</a>
+                    <a href="about.html" class="toolbar-icon">⌂</a>
+                </div>
+
+                <div class="col-6">
+                    <div class="address-bar">
+                        ♙ &nbsp; the-poisoned-pawn
+                    </div>
+                </div>
+
+                <div class="col-2 text-end">
+                    <a href="#introduction" class="toolbar-icon">☰</a>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- bootstrap grid -->
+        <div class="content-area">
+            <div class="row g-0 align-items-stretch">
+                <div class="col-md-4">
+
+                    <div class="card side-card h-100 p-2">
+                        <img src="mirrorimage.jpg"
+                             class="main-image card-img"
+                             alt="Mirror image">
+
+                        <div class="card-body text-center">
+                            <p class="mb-0">A glimpse into the creator.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-5">
+
+                    <div class="card info-card rounded-0 h-100">
+                        <div class="card-body">
+
+                            <h5 id="introduction">
+                                <span class="section-label">ABOUT ME</span>
+                            </h5>
+
+                            <p>
+                                Hello! My name is Jen or Clovis. I am the programmer
+                                and developer for the mystery murder game
+                                "The Poisoned Pawn."
+                            </p>
+
+                            <hr style="border-color:#855353;">
+
+                            <h5 id="funfacts">
+                                <span class="section-label">FUN FACTS</span>
+                            </h5>
+
+                            <p>
+                                1. I like to read, I read anything really, I like
+                                classic literature, fantasy, and romance the most though.
+                                <br>
+
+                                2. I tend to listen to music in my free time,
+                                mostly classical music or Vietnamese music.
+                                <br>
+
+                                3. I have some younger classmates in dance that
+                                calls me "mom" for some reasons.
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="card side-card h-100 p-2">
+
+                        <img src="victoriapfp.jpg"
+                             class="side-image card-img-top"
+                             alt="Profile image">
+
+                        <div class="card-body text-center">
+
+                            <h5>Creator's corner</h5>
+
+                            <p class="quote">
+                                “Love is a teacher...”
+                            </p>
+
+                            <a href="#quote" class="btn custom-button btn-sm mb-2">
+                                Read Quote
+                            </a>
+
+                            <img src="bookstack.jpg"
+                                 class="side-image mt-2"
+                                 alt="Stack of books">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Quote area -->
+        <div class="container py-3" id="quote">
+
+            <div class="card info-card text-center p-3">
+
+                <blockquote class="quote mb-2">
+                    “Love is a teacher, but one must know how to acquire it,
+                    for it is acquired with difficulty, it is dearly bought,
+                    one must spend a great deal of labour and time on it,
+                    for we must love not only for a moment and fortuitously,
+                    but for ever.”
+                </blockquote>
+
+                <cite>
+                    — The Brothers Karamazov by Fyodor Dostoyevsky
+                </cite>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bootstrap Footer -->
+        <div class="window-footer">
+            The Poisoned Pawn ♟ | card made by me
+        </div>
+
     </div>
 
-<div class="image-block">
-    <img src="victoriapfp.jpg" style="border-radius: 15px; width: 300px; height: 300px;">
-    </div>
-
-  <div class="image-block">
-    <img src="bookstack.jpg" style="border-radius: 15px; width: 300px; height: 300px;">
-  </div>
 </div>
-    
-<!-- This is a character quote -->
-<blockquote style="text-align: center; font-size:25px ; max-width: 700px; margin: 20px auto;">
-  “Love is a teacher, but one must know how to acquire it, for it is acquired with difficulty, it is dearly bought, one must spend a great deal of labour and time on it, for we must love not only for a moment and fortuitously, but for ever.”
-    <br><br>
-  <cite>— The Brothers Karamazov by Fyodor Dostoyevsky</cite>
-</blockquote>
 
 
-<ul style="text-align: center; list-style-position: inside; font-size: 25px;">
-  <li><a href="#introduction">Introduction</a></li>
-  <li><a href="#funfacts">Funfacts about me</a></li>
-</ul>
-
-
-
-<h2 id="introduction" style="text-align: center; font-size: 40px;">
-    Introduction
-</h2>
-
-<p style="text-align: center; line-height: 1.5;">
-  Hello! My name is Jen or Clovis. I am the programmer and developer for the mystery murder game "The Poisoned Pawn"
-</p>
-
-<h2 id="funfacts" style="text-align: center; font-size: 40px;">
-    Here are some fun facts about me
-</h2>
-
-
-<p style="text-align: center; line-height: 1.5;">
-
-  1. I like to read, I read anything really, I like classic literature, fantasy, and romance the most though
-  <br>
-  2. I tend to listen to music in my free time, mostly classical music or Vietnamese music 
-  <br>
-  3. I have some younger classmates in dance that calls me "mom" for some reasons.
-  <br>
-</p>
-
-    <p><a href="index.html">← Return to the opening position</a></p>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
